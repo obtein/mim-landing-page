@@ -2,34 +2,81 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mim İnşaat</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Menü düğmesi -->
+  <button class="menu-toggle" onclick="openNav()">☰</button>
+
+  <!-- Sidebar -->
+  <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="#hakkimizda">Hakkımızda</a>
+    <a href="#projeler">Projeler</a>
+    <a href="#iletisim">İletişim</a>
+  </div>
+
   <header>
-    <h1>Mim İnşaat</h1>
-    <p>Seramik ve banyo çözümlerinde güvenilir adres</p>
+    <div class="container">
+      <img src="images/logo.png" alt="Mim İnşaat Logo" class="logo">
+      <nav>
+        <ul>
+          <li><a href="#hakkimizda">Hakkımızda</a></li>
+          <li><a href="#projeler">Projeler</a></li>
+          <li><a href="#iletisim">İletişim</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <section>
-    <h2>Hakkımızda</h2>
-    <p>Firmamız uzun yıllardır seramik ve banyo alanında kaliteli hizmet vermektedir.</p>
+  <section class="hero">
+    <h1>Seramik ve Banyo Çözümlerinde Uzman</h1>
+    <p>Estetik ve dayanıklılığı bir araya getiriyoruz</p>
   </section>
 
-  <section>
-    <h2>Projelerimiz</h2>
-    <img src="images/banyo1.jpg" alt="Banyo projesi 1" width="300">
-    <img src="images/banyo2.jpg" alt="Banyo projesi 2" width="300">
+  <section id="hakkimizda" class="content">
+    <div class="container">
+      <h2>Hakkımızda</h2>
+      <p>Firmamız uzun yıllardır seramik ve banyo dekorasyonunda kaliteli işçilik ve müşteri memnuniyeti ile hizmet vermektedir.</p>
+    </div>
   </section>
 
-  <section>
-    <h2>İletişim</h2>
-    <p>📞 0555 555 55 55</p>
-    <p>📧 info@miminsaat.shop</p>
+  <section id="projeler" class="gallery">
+    <div class="container">
+      <h2>Projelerimiz</h2>
+      <div class="grid">
+        <img src="images/project1.jpg" alt="Proje 1">
+        <img src="images/project2.jpg" alt="Proje 2">
+        <img src="images/project3.jpg" alt="Proje 3">
+      </div>
+    </div>
+  </section>
+
+  <section id="iletisim" class="content">
+    <div class="container">
+      <h2>İletişim</h2>
+      <p><strong>Telefon:</strong> 0555 555 55 55</p>
+      <p><strong>E-posta:</strong> info@miminsaat.shop</p>
+      <p><strong>Adres:</strong> Örnek Mah. Mim Cad. No:1 İstanbul</p>
+    </div>
   </section>
 
   <footer>
-    <p>© 2025 Mim İnşaat</p>
+    <div class="container">
+      <p>&copy; 2025 Mim İnşaat. Tüm hakları saklıdır.</p>
+    </div>
   </footer>
+
+  <script>
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "250px";
+    }
+    function closeNav() {
+      document.getElementById("mySidebar").style.width = "0";
+    }
+  </script>
 </body>
 </html>
