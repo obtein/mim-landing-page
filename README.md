@@ -1,4 +1,0 @@
-"# mim-landing-page" 
-
-
-test
